@@ -12,7 +12,7 @@ bold=`tput bold`
 normal=`tput sgr0`
 
 CONFIRM=0
-APACHE=1
+APACHE=0
 
 HELP="Try '$0 --help' for more information"
 FULL_HELP="Usage: invenio-install [option] virtualenv_name
@@ -20,8 +20,8 @@ Install Invenio using virtualenv and workdir.
 
  -h, --help
      --yes-i-know
-     --runserver    Indicates if the apache configurarion files should be 
-                    created. (By default they are)
+     --apache       Indicates if the apache configurarion files should be
+                    created. (By default they are not)
 "
 
 ####################
@@ -78,8 +78,8 @@ do
         --yes-i-know)
             CONFIRM=1
             shift;;
-        --runserver)
-            APACHE=0
+        --apache)
+            APACHE=1
             shift;;
         --)
             shift
