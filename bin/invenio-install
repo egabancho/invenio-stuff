@@ -459,7 +459,7 @@ echo
 inveniomanage database create
 inveniomanage demosite create
 inveniomanage demosite populate
-inveniomanage bibfield reset
+inveniomanage bibfield cache reset
 
 [ $CONFIRM -eq 0 ] && ( echo "Press enter to continue ... (exit ^c)"; read )
 
